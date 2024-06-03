@@ -18,8 +18,9 @@ export default function App() {
     }
   }, []);
 
+ 
   const saveToLS = (Params) => {
-    localStorage.setItem("todos", JSON.stringify(todos));
+    localStorage.setItem("todos", JSON.stringify(Params));
   };
   const toggleFinished = (e) => {
     setshowFinished(!showFinished);
@@ -43,9 +44,11 @@ export default function App() {
   };
 
   const handleAdd = () => {
-    setTodos([...todos, { id: uuidv4(), todo, isCompleted: false }]);
+    let newTodos = [...todos, { id: uuidv4(), todo, isCompleted: false }]
+    setTodos(newTodos)
+    // console.log(newTodo);
     setTodo("");
-    saveToLS();
+    saveToLS(newTodos);
   };
   const handleChange = (e) => {
     setTodo(e.target.value);
@@ -65,7 +68,7 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <div className="mx-3 md:container md:mx-auto my-5 rounded-xl p-5 bg-violet-100 min-h-[80vh] md:w-[35%]">
+      <div className="mx-3 md:container md:mx-auto my-5 shadow-2xl to-black rounded-xl p-5 bg-violet-300 min-h-[80vh] md:w-[35%]">
         <h1 className="font-bold text-center text-xl ">
           MyTask- Manage Todos At One Place
         </h1>

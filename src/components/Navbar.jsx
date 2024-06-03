@@ -2,15 +2,17 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between bg-slate-700 text-white py-3">
-      <div className="logo">
-        <span className="font-bold text-xl mx-8">My<span className="text-red-500">Task</span></span>
+    <nav className="flex bg-slate-800 text-white py-3">
+      <div className="logo flex ">
+        <img
+          className="h-8 w-8 mx-4 object-cover"
+          src="src/assets/todo.png"
+          alt="logo-image"
+        />
+        <h1 className="font-bold text-2xl hover:cursor-pointer hover:text-black ">
+          My<span className="text-red-600">Task</span>
+        </h1>
       </div>
-      <ul className="flex gap-8 mx-9">
-        <li className="Cursor-pointer hover:font-bold transition-all duration-500">Home</li>
-        <li className="Cursor-pointer hover:font-bold transition-all duration-500">About</li>
-        
-      </ul>
     </nav>
   );
 };
