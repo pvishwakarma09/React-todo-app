@@ -10,7 +10,7 @@ const Navbar = () => {
             src="src/assets/todo.png"
             alt="logo-image"
           /> */}
-          <h1 className="font-bold text-2xl hover:cursor-pointer hover:text-black ">
+          <h1 className="font-bold mx-8 text-2xl hover:cursor-pointer hover:text-black ">
             My<span className="text-red-600">Task</span>
           </h1>
         </div>
