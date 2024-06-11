@@ -13,12 +13,11 @@ export default function App() {
   useEffect(() => {
     let todoString = localStorage.getItem("todos");
     if (todoString) {
-      let todos = JSON.parse(localStorage.getItem("todos"));
+      // let todos = JSON.parse(localStorage.getItem("todos"));
       setTodos(todos);
     }
   }, []);
 
- 
   const saveToLS = (Params) => {
     localStorage.setItem("todos", JSON.stringify(Params));
   };
@@ -27,7 +26,7 @@ export default function App() {
   };
 
   const handleEdit = (e, id) => {
-    let t = todos.filter(i => i.id === id);
+    let t = todos.filter((i) => i.id === id);
     setTodo(t[0].todo);
     let newTodos = todos.filter((item) => {
       return item.id !== id;
@@ -44,8 +43,8 @@ export default function App() {
   };
 
   const handleAdd = () => {
-    let newTodos = [...todos, { id: uuidv4(), todo, isCompleted: false }]
-    setTodos(newTodos)
+    let newTodos = [...todos, { id: uuidv4(), todo, isCompleted: false }];
+    setTodos(newTodos);
     // console.log(newTodo);
     setTodo("");
     saveToLS(newTodos);
@@ -54,7 +53,6 @@ export default function App() {
     setTodo(e.target.value);
   };
   const handleCheckbox = (e) => {
-
     let id = e.target.name;
     let index = todos.findIndex((item) => {
       return item.id === id;
@@ -84,7 +82,7 @@ export default function App() {
             <button
               onClick={handleAdd}
               disabled={todo.length <= 3}
-              className="bg-violet-800 hover:bg-violet-950 disabled:bg-violet-500 p-3 py-1 text-white rounded-full font-bold mx-2"
+              className="bg-violet-800 hover:bg-violet-900 hover:cursor-pointer disabled:bg-violet-500 p-3 py-1 text-white rounded-full font-bold mx-2"
             >
               Save
             </button>
