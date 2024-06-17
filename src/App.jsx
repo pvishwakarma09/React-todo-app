@@ -66,7 +66,7 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <div className="mx-3 md:container md:mx-auto my-5 shadow-2xl to-black rounded-xl p-5 bg-violet-300 min-h-[80vh] md:w-[35%]">
+      <div className="mx-3 md:container md:mx-auto my-5 shadow-2xl to-black rounded-xl p-5 bg-red-500 min-h-[80vh] md:w-[35%]">
         <h1 className="font-bold text-center text-xl ">
           MyTask- Manage Todos At One Place
         </h1>
@@ -82,14 +82,14 @@ export default function App() {
             <button
               onClick={handleAdd}
               disabled={todo.length <= 3}
-              className="bg-violet-800 hover:bg-violet-900 hover:cursor-pointer disabled:bg-violet-500 p-3 py-1 text-white rounded-full font-bold mx-2"
+              className="bg-red-800 hover:bg-red-900 hover:cursor-pointer disabled:bg-red-400 p-3 py-1 text-white rounded-full font-bold mx-2"
             >
               Save
             </button>
           </div>
         </div>
         <input
-          className="my-4"
+          className="my-4 "
           onChange={toggleFinished}
           type="checkbox"
           checked={showFinished}
@@ -119,7 +119,7 @@ export default function App() {
                       onClick={(e) => {
                         handleEdit(e, item.id);
                       }}
-                      className="bg-violet-800 hover:bg-violet-950 p-3 py-1 text-white rounded-md text-sm mx-1 font-bold"
+                      className="bg-red-600 hover:bg-red-700 p-3 py-1 mt-2 text-white rounded-md text-sm mx-1 font-bold"
                     >
                       <FaEdit />
                     </button>
@@ -127,7 +127,7 @@ export default function App() {
                       onClick={(e) => {
                         handleDelete(e, item.id);
                       }}
-                      className="bg-violet-800 hover:bg-violet-950 p-3 py-1 text-white rounded-md text-sm mx-1 font-bold"
+                      className="bg-red-600 hover:bg-red-700 p-3 py-1 mt-2 text-white rounded-md text-sm mx-1 font-bold"
                     >
                       <MdDeleteForever />
                     </button>
