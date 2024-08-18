@@ -66,7 +66,7 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <div className="mx-3 md:container md:mx-auto my-5 shadow-2xl to-black rounded-xl p-5 bg-red-500 min-h-[80vh] md:w-[35%]">
+      <div className="mx-3 md:container md:mx-auto my-5 shadow-2xl text-white rounded-xl p-5 bg-blue-900 min-h-[80vh] md:w-[35%]">
         <h1 className="font-bold text-center text-xl ">
           MyTask- Manage Todos At One Place
         </h1>
@@ -77,12 +77,12 @@ export default function App() {
               onChange={handleChange}
               value={todo}
               type="text"
-              className="w-full rounded-full px-5 py-1"
+              className="w-full rounded-full px-5 py-1 font-lg text-black"
             />
             <button
               onClick={handleAdd}
               disabled={todo.length <= 3}
-              className="bg-red-800 hover:bg-red-900 hover:cursor-pointer disabled:bg-red-400 p-3 py-1 text-white rounded-full font-bold mx-2"
+              className="bg-blue-700 hover:bg-blue-600 hover:cursor-pointer disabled:bg-blue-500 p-3 py-1 text-white rounded-full font-bold mx-2"
             >
               Save
             </button>
@@ -119,7 +119,7 @@ export default function App() {
                       onClick={(e) => {
                         handleEdit(e, item.id);
                       }}
-                      className="bg-red-600 hover:bg-red-700 p-3 py-1 mt-2 text-white rounded-md text-sm mx-1 font-bold"
+                      className="bg-blue-700 hover:bg-blue-600 p-3 py-1 mt-2 text-white rounded-md text-sm mx-1 font-bold"
                     >
                       <FaEdit />
                     </button>
@@ -127,7 +127,7 @@ export default function App() {
                       onClick={(e) => {
                         handleDelete(e, item.id);
                       }}
-                      className="bg-red-600 hover:bg-red-700 p-3 py-1 mt-2 text-white rounded-md text-sm mx-1 font-bold"
+                      className="bg-blue-700 hover:bg-blue-600 p-3 py-1 mt-2 text-white rounded-md text-sm mx-1 font-bold"
                     >
                       <MdDeleteForever />
                     </button>

@@ -3,15 +3,15 @@ import React from "react";
 const Navbar = () => {
   return (
     <>
-      <nav className="flex mx-3  py-3">
+      <nav className="flex mx-3  py-2">
         <div className="logo flex ">
-          <img
+          {/* <img
             className="h-8 w-8 mx-1  mt-1 object-cover"
-            src="src/assets/todo.png"
+            // src="src/assets/todo.png"
             alt="logo-image"
-          />
-          <h1 className="font-bold  text-3xl hover:cursor-pointer ">
-            My<span className="text-red-600">Tasks</span>
+          /> */}
+          <h1 className="font-bold  text-4xl hover:cursor-pointer text-blue-900">
+            My<span className="text-white">Tasks</span>
           </h1>
         </div>
       </nav> 
